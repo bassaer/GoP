@@ -9,6 +9,10 @@ type Item struct {
 	Name string
 }
 
+func (i *Item) Info() string {
+	return fmt.Sprintf("id => %d : name => %s", i.Id, i.Name)
+}
+
 func (i *Item) Show() {
-	fmt.Printf("id => %d\nname => %s\n", i.Id, i.Name)
+	fmt.Println(i.Info())
 }
